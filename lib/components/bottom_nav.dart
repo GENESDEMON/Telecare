@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:telecare/enum.dart';
+import 'package:telecare/size_config.dart';
 import 'package:telecare/utils/colours.dart';
 
 class CustomBottomNav extends StatelessWidget {
