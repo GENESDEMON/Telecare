@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:telecare/views/auth/sign.dart';
 import 'package:telecare/views/auth/splash.dart';
 import 'package:telecare/views/tabs/bookings.dart';
+import 'package:telecare/views/tabs/chat.dart';
 import 'package:telecare/views/tabs/dashboard.dart';
 import 'package:telecare/views/tabs/doctors.dart';
 import 'package:telecare/views/tabs/prescriptions.dart';
@@ -14,5 +15,6 @@ var routes = <String, WidgetBuilder>{
   '/bookings': (BuildContext context) => new Bookings(),
   '/doctors': (BuildContext context) => new Doctor(),
   '/prescriptions': (BuildContext context) => new Prescriptions(),
+  '/chat': (BuildContext context) => new Chat(),
   '/you': (BuildContext context) => new You(),
 };
