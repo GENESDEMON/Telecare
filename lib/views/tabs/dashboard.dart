@@ -7,7 +7,6 @@ import 'package:telecare/enum.dart';
 import 'package:telecare/models/doctor.dart';
 import 'package:telecare/size_config.dart';
 import 'package:telecare/utils/colours.dart';
-import 'package:telecare/views/tabs/doctors.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -57,12 +56,17 @@ class Dashboard extends StatelessWidget {
                       fontSize: getScreenHeight(15),
                     ),
                   ),
-                  Text(
-                    "view all",
-                    style: GoogleFonts.roboto(
-                      color: CMAIN.withOpacity(0.7),
-                      fontWeight: FontWeight.w400,
-                      fontSize: getScreenHeight(11),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, '/bookings');
+                    },
+                    child: Text(
+                      "view all",
+                      style: GoogleFonts.roboto(
+                        color: CMAIN.withOpacity(0.7),
+                        fontWeight: FontWeight.w400,
+                        fontSize: getScreenHeight(11),
+                      ),
                     ),
                   ),
                 ],

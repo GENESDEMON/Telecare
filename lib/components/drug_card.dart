@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:telecare/models/bookings.dart';
+import 'package:telecare/models/prescriptions.dart';
 import 'package:telecare/size_config.dart';
 import 'package:telecare/utils/colours.dart';
 
-class BookCard extends StatelessWidget {
-  const BookCard({
+class DrugCard extends StatelessWidget {
+  const DrugCard({
     Key key,
-    @required this.book,
+    @required this.drug,
   }) : super(key: key);
-  final Bookings book;
+  final Prescriptions drug;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,7 +18,7 @@ class BookCard extends StatelessWidget {
         onTap: () {},
         child: Container(
           width: double.infinity,
-          height: getScreenHeight(70),
+          height: getScreenHeight(100),
           decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(13),
@@ -39,16 +39,34 @@ class BookCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      book.name,
+                      drug.name,
                       style: GoogleFonts.roboto(
                         color: CMAIN,
                         fontWeight: FontWeight.w800,
                         fontSize: getScreenHeight(13),
                       ),
                     ),
-                    SizedBox(height: getScreenHeight(5)),
+                    SizedBox(height: getScreenHeight(11)),
                     Text(
-                      book.role,
+                      "Usage: " + drug.usage,
+                      style: GoogleFonts.roboto(
+                        color: CMAIN.withOpacity(0.7),
+                        fontWeight: FontWeight.w600,
+                        fontSize: getScreenHeight(11),
+                      ),
+                    ),
+                    SizedBox(height: getScreenHeight(11)),
+                    Text(
+                      "Doctor: " + drug.doctor,
+                      style: GoogleFonts.roboto(
+                        color: CMAIN.withOpacity(0.7),
+                        fontWeight: FontWeight.w600,
+                        fontSize: getScreenHeight(11),
+                      ),
+                    ),
+                    SizedBox(height: getScreenHeight(11)),
+                    Text(
+                      "Duration: " + drug.day,
                       style: GoogleFonts.roboto(
                         color: CMAIN.withOpacity(0.7),
                         fontWeight: FontWeight.w600,
@@ -63,16 +81,7 @@ class BookCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      book.day,
-                      style: GoogleFonts.roboto(
-                        color: CMAIN,
-                        fontWeight: FontWeight.w800,
-                        fontSize: getScreenHeight(13),
-                      ),
-                    ),
-                    SizedBox(height: getScreenHeight(5)),
-                    Text(
-                      book.time,
+                      drug.time,
                       style: GoogleFonts.roboto(
                         color: CMAIN.withOpacity(0.7),
                         fontWeight: FontWeight.w600,
