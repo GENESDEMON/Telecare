@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:telecare/components/chatDetailPage.dart';
 import 'package:telecare/models/doctor.dart';
 import 'package:telecare/size_config.dart';
 import 'package:telecare/utils/colours.dart';
@@ -65,10 +66,17 @@ class DoctorCard extends StatelessWidget {
                 size: 23,
               ),
               SizedBox(width: getScreenWidth(9)),
-              Icon(
-                Icons.message,
-                color: CMAIN,
-                size: 23,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ChatDetailPage();
+                  }));
+                },
+                child: Icon(
+                  Icons.message,
+                  color: CMAIN,
+                  size: 23,
+                ),
               ),
             ],
           ),

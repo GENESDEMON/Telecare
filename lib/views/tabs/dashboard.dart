@@ -31,7 +31,7 @@ class Dashboard extends StatelessWidget {
                 height: getScreenHeight(10),
               ),
               Text(
-                "How can we halp you?",
+                "How can we help you?",
                 style: GoogleFonts.roboto(
                   color: CMAIN,
                   fontWeight: FontWeight.w400,
@@ -167,12 +167,17 @@ class Dashboard extends StatelessWidget {
                       fontSize: getScreenHeight(15),
                     ),
                   ),
-                  Text(
-                    "view all",
-                    style: GoogleFonts.roboto(
-                      color: CMAIN.withOpacity(0.7),
-                      fontWeight: FontWeight.w400,
-                      fontSize: getScreenHeight(11),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, '/doctors');
+                    },
+                    child: Text(
+                      "view all",
+                      style: GoogleFonts.roboto(
+                        color: CMAIN.withOpacity(0.7),
+                        fontWeight: FontWeight.w400,
+                        fontSize: getScreenHeight(11),
+                      ),
                     ),
                   ),
                 ],
